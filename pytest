@@ -1,0 +1,5 @@
+# Using pytest
+pytest tests/
+
+# Or with unittest
+python -m unittest discover tests
