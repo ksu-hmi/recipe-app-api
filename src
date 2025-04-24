@@ -1,0 +1,10 @@
+src/
+└── recipe_app/
+    ├── __init__.py
+    ├── main.py           # Core logic (e.g., add/search/display recipes)
+    ├── models.py         # Data models (e.g., Recipe class or ORM models)
+    ├── db.py             # Database connection/setup
+    ├── cli.py            # Command-line interface (if using CLI)
+    ├── routes.py         # Flask routes (if using web app)
+    ├── config.py         # Configs like DB path, debug mode
+    └── utils.py          # Helper functions/utilities
