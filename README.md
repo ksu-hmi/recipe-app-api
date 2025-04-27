@@ -18,4 +18,4 @@ To set up the repository on your local machine:
 ```bash
 git clone https://github.com/your-repo/recipe-repository.git
 cd recipe-repository
-pip install -r requirements.txt
+pip install -r requirements.txt 
