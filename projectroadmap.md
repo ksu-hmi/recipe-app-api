@@ -50,3 +50,4 @@ if __name__ == "__main__":
     add_recipe("Spaghetti Carbonara", ["spaghetti", "eggs", "cheese", "bacon"], "Cook pasta, mix with eggs, cheese, and bacon.")
     view_recipes()
     search_recipe("Spaghetti Carbonara")
+ 
