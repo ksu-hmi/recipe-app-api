@@ -28,6 +28,6 @@ setup(
         'Development Status :: 3 - Alpha',
         'Intended Audience :: End Users/Desktop',
         'Topic :: Software Development :: Build Tools',
-    ],
+    ], 
     python_requires='>=3.7',
 )
