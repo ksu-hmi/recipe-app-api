@@ -45,7 +45,7 @@ def search_recipe(name):
     else:
         print(f"Recipe '{name}' not found!")
 
-# Sample execution
+# Sample execution 
 if __name__ == "__main__":
     add_recipe("Spaghetti Carbonara", ["spaghetti", "eggs", "cheese", "bacon"], "Cook pasta, mix with eggs, cheese, and bacon.")
     view_recipes()
