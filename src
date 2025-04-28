@@ -1,10 +1,62 @@
-src/
-└── recipe_app/
-    ├── __init__.py
-    ├── main.py           # Core logic (e.g., add/search/display recipes)
-    ├── models.py         # Data models (e.g., Recipe class or ORM models)
-    ├── db.py             # Database connection/setup
-    ├── cli.py            # Command-line interface (if using CLI)
-    ├── routes.py         # Flask routes (if using web app)
-    ├── config.py         # Configs like DB path, debug mode
-    └── utils.py          # Helper functions/utilities
+# recipe_viewer.py
+
+# 1. Define the recipe dictionary
+recipe = {
+    "title": "Classic Spaghetti Bolognese",
+    "description": "A hearty and flavorful Italian pasta dish made with a rich meat sauce.",
+    "prepTime": 15,
+    "cookTime": 60,
+    "servings": 4,
+    "ingredients": [
+        {"name": "Spaghetti", "quantity": "400g"},
+        {"name": "Ground beef", "quantity": "500g"},
+        {"name": "Onion", "quantity": "1, chopped"},
+        {"name": "Garlic cloves", "quantity": "2, minced"},
+        {"name": "Carrot", "quantity": "1, grated"},
+        {"name": "Celery stalk", "quantity": "1, chopped"},
+        {"name": "Tomato paste", "quantity": "2 tbsp"},
+        {"name": "Crushed tomatoes", "quantity": "400g can"},
+        {"name": "Olive oil", "quantity": "2 tbsp"},
+        {"name": "Salt", "quantity": "to taste"},
+        {"name": "Black pepper", "quantity": "to taste"},
+        {"name": "Fresh basil", "quantity": "a few leaves, chopped"},
+        {"name": "Parmesan cheese", "quantity": "to garnish"}
+    ],
+    "instructions": [
+        "Heat olive oil in a large pan over medium heat.",
+        "Add onion, garlic, carrot, and celery. Sauté until softened.",
+        "Add ground beef and cook until browned.",
+        "Stir in tomato paste and cook for 2 minutes.",
+        "Add crushed tomatoes, salt, and pepper. Simmer for 45 minutes.",
+        "Meanwhile, cook spaghetti according to package instructions.",
+        "Drain the pasta and combine with the sauce.",
+        "Top with chopped basil and Parmesan before serving."
+    ],
+    "category": "Pasta",
+    "cuisine": "Italian",
+    "tags": ["hearty", "meat", "dinner", "classic"]
+}
+
+# 2. Define the function
+def view_recipe_as_customer(recipe):
+    print("=" * 50)
+    print(f"{recipe['title'].center(50)}")
+    print("=" * 50)
+    print(f"\n{recipe['description']}\n")
+    print(f"Category: {recipe['category']} | Cuisine: {recipe['cuisine']}")
+    print(f"Prep Time: {recipe['prepTime']} min | Cook Time: {recipe['cookTime']} min | Servings: {recipe['servings']}\n")
+    
+    print("- Ingredients -")
+    for item in recipe['ingredients']:
+        print(f" • {item['quantity']} {item['name']}")
+    
+    print("\n- Instructions -")
+    for idx, step in enumerate(recipe['instructions'], 1):
+        print(f" {idx}) {step}")
+    
+    print("\nTags: ", end="")
+    print(", ".join(recipe['tags']))
+    print("=" * 50)
+
+# 3. Call the function
+view_recipe_as_customer(recipe)
